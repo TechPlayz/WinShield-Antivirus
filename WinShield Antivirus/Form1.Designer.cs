@@ -30,22 +30,22 @@ namespace WinShield_Antivirus
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.ScanProgressBar = new System.Windows.Forms.ProgressBar();
             this.scan = new System.Windows.Forms.Button();
             this.Progress_Indicator = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ScanProgressTimer = new System.Windows.Forms.Timer(this.components);
             this.Patience = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.scanned_file_heading = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // ScanProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(1, 34);
-            this.progressBar1.Maximum = 1000;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(798, 23);
-            this.progressBar1.TabIndex = 0;
+            this.ScanProgressBar.Location = new System.Drawing.Point(1, 34);
+            this.ScanProgressBar.Maximum = 1000;
+            this.ScanProgressBar.Name = "ScanProgressBar";
+            this.ScanProgressBar.Size = new System.Drawing.Size(798, 23);
+            this.ScanProgressBar.TabIndex = 0;
             // 
             // scan
             // 
@@ -68,9 +68,9 @@ namespace WinShield_Antivirus
             this.Progress_Indicator.Text = "Progress:";
             this.Progress_Indicator.Click += new System.EventHandler(this.Progress_Indicator_Click);
             // 
-            // timer1
+            // ScanProgressTimer
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.ScanProgressTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Patience
             // 
@@ -114,7 +114,7 @@ namespace WinShield_Antivirus
             this.Controls.Add(this.Patience);
             this.Controls.Add(this.Progress_Indicator);
             this.Controls.Add(this.scan);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.ScanProgressBar);
             this.Name = "Form1";
             this.Text = "WinShield Antivirus";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -125,10 +125,10 @@ namespace WinShield_Antivirus
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar ScanProgressBar;
         private System.Windows.Forms.Button scan;
         private System.Windows.Forms.Label Progress_Indicator;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer ScanProgressTimer;
         private System.Windows.Forms.Label Patience;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label scanned_file_heading;
