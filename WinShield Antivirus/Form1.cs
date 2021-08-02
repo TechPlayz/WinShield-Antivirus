@@ -39,12 +39,14 @@ namespace WinShield_Antivirus
             if (ScanProgressBar.Value != 100)
             {
                 ScanProgressBar.Value++;
+                this.FormBorderStyle = FormBorderStyle.None;
 
             }
             else
             {
                 ScanProgressTimer.Stop();
                 MessageBox.Show("Virus Detected", "Alert!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.FormBorderStyle = FormBorderStyle.Sizable;
             }
         }
 
