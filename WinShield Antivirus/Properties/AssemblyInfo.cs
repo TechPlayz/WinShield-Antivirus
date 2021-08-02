@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WinShield Antivirus")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Protect your PC from viruses")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WinShield Antivirus")]

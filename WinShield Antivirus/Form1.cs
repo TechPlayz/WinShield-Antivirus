@@ -49,5 +49,17 @@ namespace WinShield_Antivirus
         {
             
         }
+
+        private void Dark_Theme_CheckedChanged(object sender, EventArgs e)
+        {
+            if(Dark_Theme.Checked)
+            {
+                this.BackColor = Color.Black;
+            }
+            else
+            {
+                this.BackColor = Color.White;
+            }
+        }   
     }
 }

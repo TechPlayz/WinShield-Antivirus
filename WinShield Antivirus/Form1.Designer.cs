@@ -36,23 +36,25 @@ namespace WinShield_Antivirus
             this.Progress_Indicator = new System.Windows.Forms.Label();
             this.ScanProgressTimer = new System.Windows.Forms.Timer(this.components);
             this.Patience = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.scanned_file_heading = new System.Windows.Forms.Label();
             this.shield_win_pic = new System.Windows.Forms.PictureBox();
+            this.Dark_Theme = new System.Windows.Forms.CheckBox();
+            this.Title = new System.Windows.Forms.Label();
+            this.Hyped_Pic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.shield_win_pic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hyped_Pic)).BeginInit();
             this.SuspendLayout();
             // 
             // ScanProgressBar
             // 
-            this.ScanProgressBar.Location = new System.Drawing.Point(1, 34);
+            this.ScanProgressBar.Location = new System.Drawing.Point(212, 120);
             this.ScanProgressBar.Maximum = 1000;
             this.ScanProgressBar.Name = "ScanProgressBar";
-            this.ScanProgressBar.Size = new System.Drawing.Size(798, 23);
+            this.ScanProgressBar.Size = new System.Drawing.Size(576, 23);
             this.ScanProgressBar.TabIndex = 0;
             // 
             // scan
             // 
-            this.scan.Location = new System.Drawing.Point(324, 105);
+            this.scan.Location = new System.Drawing.Point(433, 149);
             this.scan.Name = "scan";
             this.scan.Size = new System.Drawing.Size(128, 23);
             this.scan.TabIndex = 1;
@@ -63,10 +65,10 @@ namespace WinShield_Antivirus
             // Progress_Indicator
             // 
             this.Progress_Indicator.AutoSize = true;
-            this.Progress_Indicator.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Progress_Indicator.BackColor = System.Drawing.Color.Transparent;
             this.Progress_Indicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Progress_Indicator.ForeColor = System.Drawing.Color.Tomato;
-            this.Progress_Indicator.Location = new System.Drawing.Point(13, 15);
+            this.Progress_Indicator.Location = new System.Drawing.Point(209, 80);
             this.Progress_Indicator.Name = "Progress_Indicator";
             this.Progress_Indicator.Size = new System.Drawing.Size(60, 13);
             this.Progress_Indicator.TabIndex = 2;
@@ -84,64 +86,80 @@ namespace WinShield_Antivirus
             this.Patience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Patience.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Patience.ForeColor = System.Drawing.Color.Crimson;
-            this.Patience.Location = new System.Drawing.Point(221, 158);
+            this.Patience.Location = new System.Drawing.Point(322, 221);
             this.Patience.Name = "Patience";
             this.Patience.Size = new System.Drawing.Size(363, 25);
             this.Patience.TabIndex = 4;
             this.Patience.Text = "Please be patient until scan ends";
             // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1, 105);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(174, 140);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // scanned_file_heading
-            // 
-            this.scanned_file_heading.AutoSize = true;
-            this.scanned_file_heading.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.scanned_file_heading.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scanned_file_heading.Location = new System.Drawing.Point(12, 79);
-            this.scanned_file_heading.Name = "scanned_file_heading";
-            this.scanned_file_heading.Size = new System.Drawing.Size(112, 23);
-            this.scanned_file_heading.TabIndex = 6;
-            this.scanned_file_heading.Text = "Scanned Files:";
-            // 
             // shield_win_pic
             // 
-            this.shield_win_pic.BackColor = System.Drawing.SystemColors.Highlight;
+            this.shield_win_pic.BackColor = System.Drawing.Color.Transparent;
             this.shield_win_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.shield_win_pic.Image = ((System.Drawing.Image)(resources.GetObject("shield_win_pic.Image")));
-            this.shield_win_pic.Location = new System.Drawing.Point(675, 120);
+            this.shield_win_pic.Location = new System.Drawing.Point(12, 11);
             this.shield_win_pic.Name = "shield_win_pic";
-            this.shield_win_pic.Size = new System.Drawing.Size(100, 83);
+            this.shield_win_pic.Size = new System.Drawing.Size(31, 27);
             this.shield_win_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.shield_win_pic.TabIndex = 8;
             this.shield_win_pic.TabStop = false;
+            // 
+            // Dark_Theme
+            // 
+            this.Dark_Theme.AutoSize = true;
+            this.Dark_Theme.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dark_Theme.ForeColor = System.Drawing.Color.DarkRed;
+            this.Dark_Theme.Location = new System.Drawing.Point(694, 11);
+            this.Dark_Theme.Name = "Dark_Theme";
+            this.Dark_Theme.Size = new System.Drawing.Size(94, 20);
+            this.Dark_Theme.TabIndex = 9;
+            this.Dark_Theme.Text = "Dark Theme";
+            this.Dark_Theme.UseVisualStyleBackColor = true;
+            this.Dark_Theme.CheckedChanged += new System.EventHandler(this.Dark_Theme_CheckedChanged);
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Engravers MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.Red;
+            this.Title.Location = new System.Drawing.Point(49, 16);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(197, 12);
+            this.Title.TabIndex = 10;
+            this.Title.Text = "WinShield Antivirus";
+            // 
+            // Hyped_Pic
+            // 
+            this.Hyped_Pic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hyped_Pic.BackgroundImage")));
+            this.Hyped_Pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Hyped_Pic.Location = new System.Drawing.Point(3, 58);
+            this.Hyped_Pic.Name = "Hyped_Pic";
+            this.Hyped_Pic.Size = new System.Drawing.Size(200, 380);
+            this.Hyped_Pic.TabIndex = 11;
+            this.Hyped_Pic.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Hyped_Pic);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.Dark_Theme);
             this.Controls.Add(this.shield_win_pic);
-            this.Controls.Add(this.scanned_file_heading);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.Patience);
             this.Controls.Add(this.Progress_Indicator);
             this.Controls.Add(this.scan);
             this.Controls.Add(this.ScanProgressBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "WinShield Antivirus";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.shield_win_pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hyped_Pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,9 +172,10 @@ namespace WinShield_Antivirus
         private System.Windows.Forms.Label Progress_Indicator;
         private System.Windows.Forms.Timer ScanProgressTimer;
         private System.Windows.Forms.Label Patience;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label scanned_file_heading;
         private System.Windows.Forms.PictureBox shield_win_pic;
+        private System.Windows.Forms.CheckBox Dark_Theme;
+        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.PictureBox Hyped_Pic;
     }
 }
 
