@@ -54,6 +54,7 @@ namespace WinShield_Antivirus
         }
 
         //private void btnExitProgram_Click(object sender, EventArgs e)
+        /*
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
@@ -66,6 +67,7 @@ namespace WinShield_Antivirus
             }
             
         }
+        */
 
         private void Dark_Theme_CheckedChanged(object sender, EventArgs e)
         {
