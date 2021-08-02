@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
+
 
 namespace WinShield_Antivirus
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -42,11 +44,26 @@ namespace WinShield_Antivirus
             else
             {
                 ScanProgressTimer.Stop();
+                MessageBox.Show("Virus Detected", "Alert!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        //private void btnExitProgram_Click(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                var closing = MessageBox.Show("Are you sure that you want to close the antivirus?", "Vulnerability alert", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (closing == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
             
         }
 

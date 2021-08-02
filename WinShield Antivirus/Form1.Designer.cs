@@ -1,7 +1,7 @@
 ﻿
 namespace WinShield_Antivirus
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WinShield_Antivirus
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.ScanProgressBar = new System.Windows.Forms.ProgressBar();
             this.scan = new System.Windows.Forms.Button();
             this.Progress_Indicator = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@ namespace WinShield_Antivirus
             // 
             // scan
             // 
-            this.scan.Location = new System.Drawing.Point(433, 149);
+            this.scan.Location = new System.Drawing.Point(465, 149);
             this.scan.Name = "scan";
             this.scan.Size = new System.Drawing.Size(128, 23);
             this.scan.TabIndex = 1;
@@ -86,7 +86,7 @@ namespace WinShield_Antivirus
             this.Patience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Patience.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Patience.ForeColor = System.Drawing.Color.Crimson;
-            this.Patience.Location = new System.Drawing.Point(322, 221);
+            this.Patience.Location = new System.Drawing.Point(335, 223);
             this.Patience.Name = "Patience";
             this.Patience.Size = new System.Drawing.Size(363, 25);
             this.Patience.TabIndex = 4;
@@ -138,7 +138,7 @@ namespace WinShield_Antivirus
             this.Hyped_Pic.TabIndex = 11;
             this.Hyped_Pic.TabStop = false;
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +155,7 @@ namespace WinShield_Antivirus
             this.Controls.Add(this.ScanProgressBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "WinShield Antivirus";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.shield_win_pic)).EndInit();

@@ -2,9 +2,9 @@ C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\bin\Debu
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\bin\Debug\WinShield Antivirus.exe
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\bin\Debug\WinShield Antivirus.pdb
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield Antivirus.csproj.AssemblyReference.cache
-C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield_Antivirus.Form1.resources
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield_Antivirus.Properties.Resources.resources
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield Antivirus.csproj.GenerateResource.cache
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield Antivirus.csproj.CoreCompileInputs.cache
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield Antivirus.exe
 C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield Antivirus.pdb
+C:\Users\pppmi\Documents\GitHub\WinShield-Antivirus\WinShield Antivirus\obj\Debug\WinShield_Antivirus.MainWindow.resources
