@@ -81,6 +81,11 @@ namespace WinShield_Antivirus
             {
                 this.BackColor = Color.White;
             }
-        }   
+        }
+
+        private void process1_Exited(object sender, EventArgs e)
+        {
+
+        }
     }
 }
