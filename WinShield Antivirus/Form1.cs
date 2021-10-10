@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 using Microsoft.Win32;
 
 
@@ -39,37 +41,20 @@ namespace WinShield_Antivirus
             if (ScanProgressBar.Value != 100)
             {
                 ScanProgressBar.Value++;
-                this.FormBorderStyle = FormBorderStyle.None;
 
             }
             else
             {
                 ScanProgressTimer.Stop();
                 MessageBox.Show("Virus Detected", "Alert!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.FormBorderStyle = FormBorderStyle.Sizable;
             }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        //private void btnExitProgram_Click(object sender, EventArgs e)
-        /*
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                var closing = MessageBox.Show("Are you sure that you want to close the antivirus?", "Vulnerability alert", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (closing == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-            }
             
         }
-        */
 
         private void Dark_Theme_CheckedChanged(object sender, EventArgs e)
         {
@@ -86,6 +71,19 @@ namespace WinShield_Antivirus
         private void process1_Exited(object sender, EventArgs e)
         {
 
+        }
+
+        public void scanConsole()
+        {
+            string filePath = @"C:\Windows\Temp\scan.bat";
+
+            string content = "@echo off\ntitle WinShield Antivirus Console\n:a\necho Scanning in Progress...\ngoto a";
+
+            using (StreamWriter outputFile = new StreamWriter(filePath))
+            {
+                outputFile.WriteLine(content);
+            }
+            Process.Start("cmd.exe", "/k C:\\Windows\\Temp\\scan.bat");
         }
     }
 }
